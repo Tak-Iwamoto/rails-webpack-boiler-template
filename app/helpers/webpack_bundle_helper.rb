@@ -13,7 +13,7 @@ module WebpackBundleHelper
   private
 
   def asset_server
-    "http://localhost:3035"
+    "http://127.0.0.1:3035"
   end
 
   def pro_manifest
@@ -34,7 +34,7 @@ module WebpackBundleHelper
     return @manifest ||= JSON.parse(test_manifest)
   end
 
-  def valid_entry?(entry)
+  def valid_file?(entry)
     return true if manifest.key?(entry)
     raise BundleNotFound, "Could not find bundle with name #{entry}"
   end
