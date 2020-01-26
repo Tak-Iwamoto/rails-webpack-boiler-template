@@ -1,0 +1,41 @@
+{
+  "name": "webpack_boiler_template",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "jquery-ujs": "^1.2.2",
+    "popper.js": "^1.16.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "autoprefixer": "^9.7.4",
+    "css-loader": "^3.4.2",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^5.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-manifest-plugin": "^2.2.0"
+  },
+  "scripts": {
+    "build-dev": "webpack-dev-server --config webpack.config.js",
+    "build-prod": "webpack --mode=production"
+  }
+}
