@@ -1,24 +1,13 @@
-# README
+# Rails + Webpack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is Rails + Webpack boiler template(without Webpacker)  
 
-Things you may want to cover:
+## Run Command
 
-* Ruby version
+```docker-compose up -d```  
+```docker-compose run app rais db:migrate```  
 
-* System dependencies
+Please run following command in host.  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```yarn install```  
+```yarn build-dev```  
