@@ -50,7 +50,8 @@ module.exports = {
     ],
   },
   resolve: {
-    modules:[path.join(__dirname, 'node_modules')]
+    modules:[path.join(__dirname, 'node_modules')],
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   plugins: [
     new webpack.ProvidePlugin({

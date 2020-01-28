@@ -5,5 +5,5 @@ const App: FC = () => {
   return <div>React test</div>;
 };
 
-ReactDOM.render(<App />, document.getElementById("react-test"))
+export default App;
 
