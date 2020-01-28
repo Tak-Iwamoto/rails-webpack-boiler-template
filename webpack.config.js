@@ -9,7 +9,6 @@ glob.sync('./frontend/**/*.{js,jsx,ts,tsx,css,scss,sass}').map((file) => {
   entries[name] = file;
 })
 module.exports = {
-  mode: process.env.NODE_ENV || "development",
   entry: entries,
   output: {
     filename: "[name]-[hash].js",
@@ -48,20 +47,10 @@ module.exports = {
         test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
         use: "url-loader?limit=100000"
       },
-      {
-        test: require.resolve('jquery'),
-        use: [{
-          loader: 'expose-loader',
-          options: 'jQuery'
-        }, {
-          loader: 'expose-loader',
-          options: '$'
-        }]
-      },
     ],
   },
   resolve: {
-    modules:[path.join(__dirname, 'node_modules')] 
+    modules:[path.join(__dirname, 'node_modules')]
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -69,7 +58,6 @@ module.exports = {
       jQuery: 'jquery',
       jquery: 'jquery',
       "window.jQuery": 'jquery',
-      Popper: ['popper.js', 'default']
     }),
     new ManifestPlugin({
       writeToFileEmit: true
@@ -78,15 +66,4 @@ module.exports = {
       filename: '[name].css'
     }),
   ],
-  devServer: {
-    host: '0.0.0.0',
-    port: 3035,
-    contentBase: path.join(__dirname, 'public', 'assets'),
-    hot: true,
-    disableHostCheck: true,
-    historyApiFallback: true,
-    watchOptions: {
-      poll: 1000
-    }
-  }
 };
